@@ -63,7 +63,7 @@ void UCoreExtWaitForPrimaryPawn::Step1_ListenToPrimaryControllerExist( AGameMode
 
 void UCoreExtWaitForPrimaryPawn::Step2_TryToGetPawn( APlayerController * player_controller )
 {
-    if ( auto * pawn = player_controller->GetPawn() )
+    if ( auto pawn = player_controller->GetPawn() )
     {
         Step4_BroadCastPrimaryPawn( pawn );
     }
